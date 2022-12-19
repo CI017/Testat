@@ -1,0 +1,37 @@
+#Codebuch Razzia
+
+##Inhalt
+- Nodeattribute
+- Edgeattribute
+
+##Ursprung und Datenerhebung
+Zur Datenerhebung wurde der Artikel der taz (https://taz.de/Razzia-gegen-Reichsbuerger/!5898636/) genutzt und durch Daten aus dem Artikel der Belltower 
+(https://www.belltower.news/update-reichsbuerger-razzien-das-breite-netzwerk-der-revolutionsbereiten-reichsbuergerinnen-144131/) ergänzt. 
+Es ist ein gerichtetes two-mode-Netzwerk, das sowohl Knoten enthält, die **Personen** repräsentieren, als auch Knoten, die für **Organisationen** stehen. 
+
+##Node-Attribute
+**id**: Identische ID wie aus der Edgelist zur Identifikation der Knoten. 
+In diesem Fall geben die IDs die Initialien der dahinterstehenden Personen oder Organisationen wider.
+**name**: Ausgeschriebener Name der entsprechenden Personen oder Organisationen mit Vor- und Zunamen.
+**type**: Gibt an, ob es sich bei dem entsprechenden Knoten um eine Person oder Organisation handelt.
+      1 = Person
+      2 = Organsation
+**sector**: Gibt an aus welchem gesellschaftlichen Sektor die Person oder Organisation stammt. 
+      1 = Wirtschaft
+      2 = Militär
+      3 = Hobby
+      4 = Politik
+      5 = Adel
+      6 = Polizei
+      7 = illegale Gruppierung
+
+      
+##Edge-Attribute
+**id**: Eindeutige Kennung der Knoten. Entspricht den Initialien einer Person oder einer Organisation und damit jeweils einem Knoten.
+**from**: initiierender Knoten
+**to**: erhaltender Knoten
+**relation**: Art der Beziehung
+      1 = Mitglied
+      2 = Freunde
+      3 = Bekannte
+      4 = liiert/ehemals liiert
